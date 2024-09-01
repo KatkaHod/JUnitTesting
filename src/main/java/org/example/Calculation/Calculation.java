@@ -1,4 +1,4 @@
-package Testing;
+package org.example.Calculation;
 
 public class Calculation {
     public static int scitani(int a, int b ) {
