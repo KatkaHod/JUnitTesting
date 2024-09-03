@@ -9,16 +9,16 @@ public class Main {
 
 
         //The 'test' - do not use in this way
-        int scitani = Calculation.scitani(20,10);
+        int scitani = Calculation.addition(20,10);
         System.out.println(scitani);
 
-        int odecitani = Calculation.odcitani(20,10);
+        int odecitani = Calculation.subtraction(20,10);
         System.out.println(odecitani);
 
-        int nasobeni = Calculation.nasobeni(20,10);
+        int nasobeni = Calculation.multiplication(20,10);
         System.out.println(nasobeni);
 
-        int deleni = Calculation.deleni(20,10);
+        int deleni = Calculation.division(20,10);
         System.out.println(deleni);
 
 

@@ -1,6 +1,7 @@
 package org.example.FindMatching;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,6 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class FindMatchingTest {
 
     List <Double> testProvidedData;
+
+    //mandatory -> Data provided for testing -> always use @BeforeEach
+    @BeforeEach
     void setup () {
         testProvidedData = List.of(10.5, 15.45, 5.811, 175.0);
     }

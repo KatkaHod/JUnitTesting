@@ -15,9 +15,9 @@ public class CalculationTest {
      */
 
     @Test
-    @DisplayName("Test souctu dvou kladnych cisel")
-    public void testScitani() {
-       int actual= Calculation.scitani(2,3);
+    @DisplayName("Test 2 + 3")
+    public void testAddition() {
+       int actual= Calculation.addition(2,3);
        int expected = 5;
 
         Assertions.assertEquals(expected,actual);
@@ -25,9 +25,9 @@ public class CalculationTest {
 
 
     @Test
-    @DisplayName("Test odecitani dvou kladnych cisel")
-    public void testOdcitani() {
-        int actual = Calculation.odcitani(5,3);
+    @DisplayName("Test 5 - 3")
+    public void testSubtraction() {
+        int actual = Calculation.subtraction(5,3);
         int expected = 2;
 
         Assertions.assertEquals(expected,actual);
@@ -35,18 +35,18 @@ public class CalculationTest {
 
 
     @Test
-    @DisplayName("Test nasobeni dvou kladnych cisel")
-    public void testNasobeni() {
-        int actual = Calculation.nasobeni(5,3);
+    @DisplayName("Test 5 * 3")
+    public void testMultiplication() {
+        int actual = Calculation.multiplication(5,3);
         int expected = 15;
 
         Assertions.assertEquals(expected,actual);
     }
 
     @Test
-    @DisplayName("Test deleni dvou kladnych cisel")
-    public void testDeleni(){
-        int actual = Calculation.deleni(20,5);
+    @DisplayName("Test 20 / 5")
+    public void testDivision(){
+        int actual = Calculation.division(20,5);
         int expected = 4;
 
         Assertions.assertEquals(expected,actual);
@@ -59,13 +59,11 @@ public class CalculationTest {
      */
 
     @Test
-    @DisplayName("Test deleni nulou -> nelze delit nulou")
-    public void testDeleniZero() {
-        Exception excepted = Assertions.assertThrows(ArithmeticException.class, () -> Calculation.deleni(12, 0));
+    @DisplayName("Test 12 / 0")
+    public void testDivisionZero() {
+        Exception excepted = Assertions.assertThrows(ArithmeticException.class, () -> Calculation.division(12, 0));
         Assertions.assertEquals("/ by zero", excepted.getMessage());
     }
-
-
 
 
 
