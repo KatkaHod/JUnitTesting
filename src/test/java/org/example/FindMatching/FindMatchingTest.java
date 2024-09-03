@@ -13,10 +13,15 @@ class FindMatchingTest {
 
     List <Double> testProvidedData;
 
-    //mandatory -> Data provided for testing -> always use @BeforeEach
+    /*  Mandatory -> Data provided for testing -> always use @BeforeEach
+     -> Purpose: The purpose of this method is to initialize any necessary variables or states before each test runs.
+     -> !!Every test must be independent!! 1 TEST = 1 METHOD
+     */
+
     @BeforeEach
     void setup () {
-        testProvidedData = List.of(10.5, 15.45, 5.811, 175.0);
+        System.out.println("Init started");
+        testProvidedData = List.of(10.0, 15.45, 5.811, 175.0);
     }
 
     @Test
