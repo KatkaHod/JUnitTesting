@@ -1,4 +1,4 @@
-package org.example.Calculation;
+package org.example.calculation;
 
 public class Calculation {
     //+

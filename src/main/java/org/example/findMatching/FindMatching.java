@@ -1,4 +1,4 @@
-package org.example.FindMatching;
+package org.example.findMatching;
 
 import java.util.List;
 
