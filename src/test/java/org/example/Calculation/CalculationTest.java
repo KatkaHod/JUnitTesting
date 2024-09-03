@@ -1,6 +1,7 @@
 package org.example.Calculation;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CalculationTest {
@@ -14,6 +15,7 @@ public class CalculationTest {
      */
 
     @Test
+    @DisplayName("Test souctu dvou kladnych cisel")
     public void testScitani() {
        int actual= Calculation.scitani(2,3);
        int expected = 5;
@@ -23,6 +25,7 @@ public class CalculationTest {
 
 
     @Test
+    @DisplayName("Test odecitani dvou kladnych cisel")
     public void testOdcitani() {
         int actual = Calculation.odcitani(5,3);
         int expected = 2;
@@ -32,6 +35,7 @@ public class CalculationTest {
 
 
     @Test
+    @DisplayName("Test nasobeni dvou kladnych cisel")
     public void testNasobeni() {
         int actual = Calculation.nasobeni(5,3);
         int expected = 15;
@@ -40,6 +44,7 @@ public class CalculationTest {
     }
 
     @Test
+    @DisplayName("Test deleni dvou kladnych cisel")
     public void testDeleni(){
         int actual = Calculation.deleni(20,5);
         int expected = 4;
@@ -48,10 +53,18 @@ public class CalculationTest {
 
     }
 
+    /*
+    This test verifies that an ArithmeticException is thrown when dividing by zero,
+    Using a lambda expression to execute the division only when assertThrows checks for the exception.
+     */
+
     @Test
-    public void testDeleniNulou(){
-        //Exception excepted = Assertions.assertThrows(ArithmeticException.class)
+    @DisplayName("Test deleni nulou -> nelze delit nulou")
+    public void testDeleniZero() {
+        Exception excepted = Assertions.assertThrows(ArithmeticException.class, () -> Calculation.deleni(12, 0));
+        Assertions.assertEquals("/ by zero", excepted.getMessage());
     }
+
 
 
 
