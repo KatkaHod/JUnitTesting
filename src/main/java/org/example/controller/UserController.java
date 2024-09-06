@@ -1,6 +1,8 @@
 package org.example.controller;
 
 import org.example.User.User;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -63,10 +65,28 @@ public class UserController {
     }
 
 
+    //send data to the server
     @PostMapping
     public User createUser(@RequestBody User user) {
         users.add(user);
         return user;
     }
+
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable ("id") Long id) {
+    //empty  -> currently no database to get the data
+    }
+
+    /* Update an existing resource or, in some cases, create a resource if it does not exist.
+     -> Return the updated user
+     */
+    @PutMapping("/{id}")
+    public User updateUser(@PathVariable("id") Long id, @RequestBody User user) {
+    users.add(user);
+
+    return user;
+    }
+
+
 
 }
